@@ -1,0 +1,17 @@
+import Data.Char
+main = do
+
+  let msg_welcome = "Hello, what is your name?"
+      age_young = "Whoa.... just a little baby! Baby "
+      age_old = "damn bitch u ancient"
+
+  putStrLn msg_welcome
+  name <- getLine
+
+  putStr "What a ridiculous name..."
+  putStr name
+  putStrLn ", what'll they think of next?"
+  putStrLn ("So " ++ name ++ ", how old are you?")
+  age <- getLine
+
+  putStrLn (if age < "25" then age_young else age_old)
